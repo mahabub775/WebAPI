@@ -1,0 +1,22 @@
+1. Technology: ASP.NetCore, Angular7, Web ApI, SQL Server.
+2. DbConnection in(appsettings.json): change Server Name(your machine); DBName:StudentDB(if Need);
+3. DBTable : Just Copy following Script and paste to create table. 
+ 
+  CREATE TABLE [dbo].[Students](
+	[StudentID] [int] IDENTITY(1,1) NOT NULL,
+	[Trade] [varchar](10) NOT NULL,
+	[Lavel] [varchar](10) NOT NULL,
+	[Language] [varchar](100) NOT NULL,
+	[SyllabusName] [nvarchar](500) NOT NULL,
+	[SyllabusFile] [nvarchar](100) NULL,
+	[TestPlanFile] [nvarchar](100) NULL,
+	[DeptOffName] [nvarchar](500) NOT NULL,
+	[ManagerName] [nvarchar](500) NOT NULL,
+	[ActiveDate] [datetime] NULL,
+ CONSTRAINT [PK_Students] PRIMARY KEY CLUSTERED 
+(
+	[StudentID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
